@@ -16,7 +16,7 @@ def user_choice():
         extra_functions.end_game()
 
 
-def play_game():
+def play_game(player_score, computer_score):
     user_input = user_choice()
     computer_input = random.choice(["R", "P", "S"])
 
@@ -53,18 +53,18 @@ def play_game():
             print("You have won. Player wins.")
             winner = "player"
 
-    extra_functions.score_tracker(winner, player_score, computer_score)
+    tuple = extra_functions.score_tracker(winner, player_score, computer_score)
+    (new_player_score, new_computer_score) = tuple
+    play_again(new_player_score, new_computer_score)
 
-    play_again()
 
-
-def play_again():
+def play_again(new_player_score, new_computer_score):
     replay = input("Do you want to play again? Y or N?")
     print(replay)
 
     if replay == 'Y' or replay == 'y':
         print("Let's play again.")
-        play_game()
+        play_game(new_player_score, new_computer_score)
 
     elif replay == 'N' or replay == 'n':
         print("Thank you, goodbye.")
@@ -75,4 +75,4 @@ def play_again():
 
 player_score = 0
 computer_score = 0
-play_game()
+play_game(player_score, computer_score)

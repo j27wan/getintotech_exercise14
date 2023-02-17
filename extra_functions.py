@@ -14,3 +14,4 @@ def score_tracker(winner, player_score, computer_score):
     else:
         print("it is a draw")
     print(f"Player Score: {player_score}\nComputer Score: {computer_score}")
+    return player_score, computer_score
