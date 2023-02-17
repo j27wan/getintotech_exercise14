@@ -4,13 +4,11 @@ import extra_functions
 
 def user_choice():
     choice = input('R, P, S?')
-    print(type(choice))
 
-    if choice == 'R' or 'P' or 'S':
+    if choice == 'R' or choice == 'P' or choice == 'S':
         return choice
-
-    elif choice == 'r' or 'p' or 's':
-        print(choice.upper())
+    
+    elif choice == 'r' or choice == 'p' or choice == 's':
         return choice.upper()
 
     else:
@@ -53,11 +51,11 @@ def play_again():
     replay = input("Do you want to play again? Y or N?")
     print(replay)
 
-    if replay == 'Y' or 'y':
+    if replay == 'Y' or replay == 'y':
         print("Let's play again.")
         play_game()
 
-    elif replay == 'N' or 'n':
+    elif replay == 'N' or replay == 'n':
         print("Thank you, goodbye.")
         extra_functions.end_game()
 
