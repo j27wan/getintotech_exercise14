@@ -1,17 +1,29 @@
 import random
+import extra_functions
+
 
 def user_choice():
     choice = input('R, P, S?')
+    print(type(choice))
+
     if choice == 'R' or 'P' or 'S':
         return choice
+
     elif choice == 'r' or 'p' or 's':
+        print(choice.upper())
         return choice.upper()
+
     else:
         print("You have to enter a letter, try again")
+        extra_functions.end_game()
+
 
 def play_game():
     user_input = user_choice()
     computer_input = random.choice(["R", "P", "S"])
+
+    choice_dict = {'R': 'Rock', 'P': 'Paper', 'S': 'Scissors'}
+    print(f'You have chosen: {choice_dict[user_input]} \nThe computer has chosen: {choice_dict[computer_input]}')
 
     if user_input == computer_input:
         print("You have drawn.")
@@ -33,6 +45,24 @@ def play_game():
             print("You have lost. Computer wins.")
         else:
             print("You have won. Player wins.")
+
+    play_again()
+
+
+def play_again():
+    replay = input("Do you want to play again? Y or N?")
+    print(replay)
+
+    if replay == 'Y' or 'y':
+        print("Let's play again.")
+        play_game()
+
+    elif replay == 'N' or 'n':
+        print("Thank you, goodbye.")
+        extra_functions.end_game()
+
+    else:
+        print("Not recognised. Please type Y or N.")
 
 
 play_game()
