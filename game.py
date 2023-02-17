@@ -1,9 +1,16 @@
 import random
 
+def user_choice():
+    choice = input('R, P, S?')
+    if choice == 'R' or 'P' or 'S':
+        return choice
+    elif choice == 'r' or 'p' or 's':
+        return choice.upper()
+    else:
+        print("You have to enter a letter, try again")
 
 def play_game():
-    user_input = input('R, P, S?')
-
+    user_input = user_choice()
     computer_input = random.choice(["R", "P", "S"])
 
     if user_input == computer_input:
