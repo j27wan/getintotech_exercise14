@@ -59,20 +59,15 @@ def play_game(player_score, computer_score):
 
 
 def play_again(new_player_score, new_computer_score):
-    replay = input("Do you want to play again? Y or N?")
-    print(replay)
+    replay = input("Do you want to play again? Press Q to quit or enter to play again.")
 
-    if replay == 'Y' or replay == 'y':
-        print("Let's play again.")
-        play_game(new_player_score, new_computer_score)
-
-    elif replay == 'N' or replay == 'n':
+    if replay in ["Q", "q", "N", "n"]:
         print("Thank you, goodbye.")
         extra_functions.end_game()
-
     else:
-        print("Not recognised. Please type Y or N.")
+        play_game(new_player_score, new_computer_score)
 
-player_score = 0
-computer_score = 0
-play_game(player_score, computer_score)
+
+# player_score = 0
+# computer_score = 0
+play_game(player_score = 0, computer_score = 0)
