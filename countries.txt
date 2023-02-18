@@ -1,0 +1,4 @@
+Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,French,German'
+UK = 'UK,67330000,London,8982000,Europe,1922,Pound,CofE,English,French,Welsh, Scots Gaelic'
+France = 'France,67750000,Paris,11208000,Europe,1792,Euro,Catholicism,French,Occitan,English,German'
+Spain = 'Spain,47420000,Madrid,6714000,Europe,1978,Euro,Catholicism,Spanish,Catalan,French,German'
