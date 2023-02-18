@@ -13,7 +13,7 @@ def user_choice():
 
     else:
         print("You have to enter a letter, try again")
-        extra_functions.end_game()
+        user_choice()
 
 
 def play_game(player_score, computer_score):
