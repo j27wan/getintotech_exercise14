@@ -3,17 +3,25 @@ import extra_functions
 
 
 def user_choice():
-    choice = input('R, P, S?')
 
-    if choice == 'R' or choice == 'P' or choice == 'S':
+    choice = ''
+    while choice not in ['R', 'P', 'S', 'r', 'p', 's', 'Q', 'q']:
+        choice = input('(R)ock, (P)aper, (S)cissors or (Q)uit?').upper()
+
+    if choice == 'Q':
+        print("Thank you, goodbye.")
+        extra_functions.end_game()
+
+        # else choice == 'R' or choice == 'P' or choice == 'S':
+    else:
         return choice
     
-    elif choice == 'r' or choice == 'p' or choice == 's':
-        return choice.upper()
-
-    else:
-        print("You have to enter a letter, try again")
-        user_choice()
+        # elif choice == 'r' or choice == 'p' or choice == 's':
+        #     return choice.upper()
+        #
+        # else:
+        # print("You have to enter a letter, try again")
+        # user_choice()
 
 
 def play_game(player_score, computer_score):
